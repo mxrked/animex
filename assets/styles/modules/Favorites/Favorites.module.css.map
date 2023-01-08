@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAMA,UAAU;EACR,WAAW,EAAE,cAAc;EAC3B,GAAG,EAAE,4CAA4C;;;AAEnD,UAAU;EACR,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,8CAA8C;;;AAErD,UAAU;EACR,WAAW,EAAE,YAAY;EACzB,GAAG,EAAE,0CAA0C;;;AAEjD,UAAU;EACR,WAAW,EAAE,kBAAkB;EAC/B,GAAG,EAAE,+CAA+C;;;AAEtD,UAAU;EACR,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,2CAA2C;;;AAElD,UAAU;EACR,WAAW,EAAE,qBAAqB;EAClC,GAAG,EAAE,wDAAwD;;;AAE/D,UAAU;EACR,WAAW,EAAE,uBAAuB;EACpC,GAAG,EAAE,yDAAyD",
+    "sources": [
+        "Favorites.module.scss",
+        "../../tools/mixins/mixins.scss",
+        "../../tools/themes/themes.scss",
+        "../../tools/variables/variable.scss"
+    ],
+    "names": [],
+    "file": "Favorites.module.css"
+}

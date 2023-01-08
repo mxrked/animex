@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Kanit Medium";
+  src: url("../../../fonts/Kanit/Kanit-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Semi Bold";
+  src: url("../../../fonts/Kanit/Kanit-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Bold";
+  src: url("../../../fonts/Kanit/Kanit-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Extra Bold";
+  src: url("../../../fonts/Kanit/Kanit-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Black";
+  src: url("../../../fonts/Kanit/Kanit-Black.ttf");
+}
+
+@font-face {
+  font-family: "Martel Sans Regular";
+  src: url("../../../fonts/Martel_Sans/MartelSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Martel Sans Semi Bold";
+  src: url("../../../fonts/Martel_Sans/MartelSans-SemiBold.ttf");
+}
+/*# sourceMappingURL=Products.module.css.map */

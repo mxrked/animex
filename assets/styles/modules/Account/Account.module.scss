@@ -1,0 +1,1505 @@
+// Imports
+@import "../../tools/mixins/mixins.scss";
+@import "../../tools/themes/themes.scss";
+@import "../../tools/variables/variable.scss";
+
+// Fonts
+@font-face {
+  font-family: "Kanit Medium";
+  src: url("../../../fonts/Kanit/Kanit-Medium.ttf");
+}
+@font-face {
+  font-family: "Kanit Semi Bold";
+  src: url("../../../fonts/Kanit/Kanit-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Kanit Bold";
+  src: url("../../../fonts/Kanit/Kanit-Bold.ttf");
+}
+@font-face {
+  font-family: "Kanit Extra Bold";
+  src: url("../../../fonts/Kanit/Kanit-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Kanit Black";
+  src: url("../../../fonts/Kanit/Kanit-Black.ttf");
+}
+@font-face {
+  font-family: "Martel Sans Regular";
+  src: url("../../../fonts/Martel_Sans/MartelSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Martel Sans Semi Bold";
+  src: url("../../../fonts/Martel_Sans/MartelSans-SemiBold.ttf");
+}
+
+// Desktop
+.account_main_box {
+  max-width: 1500px;
+  @include quickCenter("relative");
+  margin-top: 200px;
+  margin-bottom: 230px;
+
+  .account_main_row {
+    .account_main_side {
+      display: flex;
+    }
+
+    .account_main_L {
+      height: 590px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      // background-color: red;
+
+      .account_profile {
+        max-width: 95%;
+        width: 100%;
+        height: 100%;
+        @include quickCenter("relative");
+        background-color: rgb(252, 252, 252);
+
+        .account_profile_heading {
+          text-align: center;
+          display: block;
+          margin-top: 45px;
+          font-family: "Kanit Medium";
+          text-transform: uppercase;
+          font-size: 24px;
+          opacity: 0.8;
+          @include selection();
+          cursor: default;
+        }
+
+        .account_profile_img_holder {
+          width: 150px;
+          height: 150px;
+          position: relative;
+          margin-top: 30px;
+          @include quickCenter("relative");
+          border-radius: 50%;
+          overflow: hidden;
+
+          &:hover {
+            .darken {
+              opacity: 1;
+            }
+          }
+
+          .pfp {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: ghostwhite;
+            top: 0;
+            left: 0;
+            @include bGSU(cover, center);
+          }
+
+          input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            cursor: pointer;
+            opacity: 0;
+          }
+
+          .darken {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            top: 0;
+            left: 0;
+            @include displayElement(flex, center, center);
+            opacity: 0;
+
+            .icon {
+              font-size: 50px;
+              color: $Gallery;
+            }
+          }
+        }
+
+        .account_profile_details {
+          display: block;
+          margin-top: 45px;
+
+          span {
+            text-align: center;
+            display: block;
+            font-family: "Kanit Medium";
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 30px;
+            @include selection();
+            cursor: default;
+          }
+
+          .detail {
+            text-align: center;
+            margin-bottom: 5px;
+
+            input {
+              font-size: 16px;
+              text-align: center;
+              font-family: "Martel Sans Semi Bold";
+              @include selection();
+            }
+
+            div {
+              @include displayElement(flex, space-evenly, center);
+              margin-top: 15px;
+              max-width: 120px;
+              @include quickCenter("relative");
+
+              button {
+                width: 30px;
+                height: 30px;
+                background-color: $OuterSpace;
+                @include displayElement(flex, center, center);
+                // border: 2px solid $Gallery;
+
+                .icon {
+                  font-size: 20px;
+                  color: $Gallery;
+                }
+              }
+
+              .show_btn {
+                &:hover {
+                  background-color: $Orange;
+                }
+              }
+
+              .hide_btn {
+                display: none;
+                background-color: $Carnation;
+              }
+            }
+          }
+
+          .signout_account_holder {
+            margin-top: 60px;
+            @include displayElement(flex, center, center);
+
+            .signout_account_holder_inner {
+              display: grid;
+            }
+
+            .signout_account {
+              text-align: center;
+              color: $OuterSpace;
+              font-family: "Kanit Semi Bold";
+              font-size: 16px;
+              text-transform: uppercase;
+              cursor: pointer;
+              display: inline-block;
+              @include selection();
+
+              &:hover {
+                color: $Orange;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .account_main_R {
+      height: 1000px;
+      // background-color: red;
+
+      .account_items {
+        max-width: 99%;
+        width: 100%;
+        height: 100%;
+        @include quickCenter("relative");
+        background-color: rgb(252, 252, 252);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .account_items_section {
+          height: 450px;
+          // background-color: red;
+          width: 100%;
+          padding-left: 30px;
+          padding-right: 30px;
+
+          .account_items_heading {
+            text-align: left;
+            display: block;
+            font-family: "Kanit Medium";
+            text-transform: uppercase;
+            font-size: 24px;
+            opacity: 0.8;
+            padding-bottom: 20px;
+            @include selection();
+            cursor: default;
+          }
+
+          .account_items_holder {
+            width: 100%;
+            height: 100%;
+            max-height: 420px;
+            @include displayElement(flex, space-between, center);
+            flex-wrap: wrap;
+            background-color: rgba(248, 245, 245, 0.308);
+            @include padding(20px, 20px, 20px, 20px);
+            overflow: hidden;
+            overflow-y: auto;
+            position: relative;
+            scrollbar-color: $Gallery;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+              width: 11px;
+            }
+
+            &::-webkit-scrollbar-track {
+              background: $Gallery;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background: $Carnation;
+              cursor: pointer;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+              background: $Orange;
+            }
+
+            .empty_text {
+              left: 0;
+              top: 0;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              @include displayElement(none, center, center);
+              font-family: "Martel Sans Semi Bold";
+              font-size: 20px;
+              opacity: 0.6;
+              z-index: 10;
+              text-transform: uppercase;
+              cursor: default;
+              @include selection();
+            }
+
+            .loading_text {
+              left: 0;
+              top: 0;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              @include displayElement(flex, center, center);
+              font-family: "Martel Sans Semi Bold";
+              font-size: 20px;
+              opacity: 0.5;
+              animation: loadingText 1.5s infinite;
+              text-transform: uppercase;
+              @include selection();
+            }
+
+            @keyframes loadingText {
+              0% {
+                opacity: 0.5;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0.5;
+              }
+            }
+
+            .cart_item {
+              max-width: 50%;
+              width: 100%;
+              height: 365px;
+              border: 4px solid rgba(248, 245, 245, 0.308);
+
+              .cart_item_inner {
+                background-color: rgba(246, 246, 246, 0.614);
+                height: 99.8%;
+                max-width: 100%;
+                @include quickCenter("relative");
+                @include padding(20px, 20px, 0, 0);
+                overflow: hidden;
+                position: relative;
+                opacity: 0.8;
+                scale: 0.95;
+
+                &:hover {
+                  opacity: 1;
+                  scale: 1;
+                }
+
+                .cart_item_remover {
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  width: 30px;
+                  height: 30px;
+                  @include displayElement(flex, center, center);
+                  border: 3px solid $OuterSpace;
+                  border-radius: 5px;
+                  opacity: 0.5;
+
+                  &:hover {
+                    opacity: 1;
+                    border-color: $Orange;
+                  }
+
+                  .icon {
+                    position: relative;
+                    top: -0.5px;
+                    font-size: 14px;
+                    color: $OuterSpace;
+                  }
+                }
+
+                .cart_item_img_holder {
+                  height: 170px;
+                  @include displayElement(flex, center, center);
+
+                  img {
+                    max-width: 150px;
+                    max-height: 150px;
+                    display: block;
+                    @include quickCenter("relative");
+                    @include selection();
+                  }
+                }
+
+                .cart_item_details {
+                  height: 100%;
+                  margin-top: 40px;
+                  @include displayElement(flex, center, center);
+
+                  .cart_item_details_inner {
+                    height: 100%;
+                    text-align: center;
+                    span {
+                      display: inline-block;
+                      text-align: center;
+                    }
+
+                    .cart_item_series {
+                      font-family: "Martel Sans Semi Bold";
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                      text-transform: uppercase;
+                      cursor: pointer;
+                      @include selection();
+                    }
+
+                    .cart_item_type {
+                      font-family: "Martel Sans Semi Bold";
+                      font-size: 14px;
+                      margin-bottom: 20px;
+                      text-transform: uppercase;
+                      color: $Carnation;
+                      cursor: pointer;
+                      @include selection();
+                    }
+
+                    .cart_item_name {
+                      font-family: "Martel Sans Semi Bold";
+                      font-size: 14px;
+                      margin-bottom: 5px;
+                      cursor: default;
+                      @include selection();
+                    }
+
+                    .cart_item_price {
+                      font-family: "Martel Sans Semi Bold";
+                      font-size: 12px;
+                      cursor: default;
+                      @include selection();
+                    }
+
+                    br {
+                      @include selection();
+                    }
+                  }
+                }
+              }
+            }
+
+            .favorite_item {
+              max-width: 50%;
+              width: 100%;
+              height: 365px;
+              border: 4px solid rgba(248, 245, 245, 0.308);
+
+              .favorite_item_inner {
+                background-color: rgba(246, 246, 246, 0.614);
+                height: 99.8%;
+                max-width: 100%;
+                @include quickCenter("relative");
+                @include padding(20px, 20px, 0, 0);
+                overflow: hidden;
+                position: relative;
+                opacity: 0.8;
+                scale: 0.95;
+
+                &:hover {
+                  opacity: 1;
+                  scale: 1;
+                }
+
+                .favorite_item_remover {
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  width: 30px;
+                  height: 30px;
+                  @include displayElement(flex, center, center);
+                  border: 3px solid $OuterSpace;
+                  border-radius: 5px;
+                  opacity: 0.5;
+
+                  &:hover {
+                    opacity: 1;
+                    border-color: $Carnation;
+                  }
+
+                  .icon {
+                    position: relative;
+                    top: -0.5px;
+                    font-size: 14px;
+                    color: $OuterSpace;
+                  }
+                }
+
+                .favorite_item_img_holder {
+                  height: 185px;
+                  @include displayElement(flex, center, center);
+
+                  img {
+                    max-width: 150px;
+                    max-height: 150px;
+                    display: block;
+                    @include quickCenter("relative");
+                    @include selection();
+                  }
+                }
+
+                .favorite_item_details {
+                  height: 100%;
+                  margin-top: 40px;
+                  @include displayElement(flex, center, center);
+
+                  .favorite_item_details_inner {
+                    height: 100%;
+                    text-align: center;
+
+                    span {
+                      display: inline-block;
+                      text-align: center;
+                    }
+
+                    .favorite_item_series {
+                      font-family: "Martel Sans Semi Bold";
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                      text-transform: uppercase;
+                      cursor: pointer;
+                      @include selection();
+                    }
+
+                    .favorite_item_type {
+                      font-family: "Martel Sans Semi Bold";
+                      font-size: 14px;
+                      margin-bottom: 25px;
+                      text-transform: uppercase;
+                      color: $Carnation;
+                      cursor: pointer;
+                      @include selection();
+                    }
+
+                    .favorite_item_name {
+                      font-family: "Martel Sans Semi Bold";
+                      font-size: 14px;
+                      margin-bottom: 15px;
+                      @include selection();
+                    }
+
+                    br {
+                      @include selection();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media all and (max-width: 1995px) {
+  .account_main_box {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .account_main_box {
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .account_main_L {
+        margin-bottom: 90px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_details {
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 700px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 40px;
+
+            .account_items_heading {
+              text-align: center;
+            }
+
+            .account_items_holder {
+              .cart_item,
+              .favorite_item {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+// Desktop Window (Smallest)
+@media all and (max-width: 768px) {
+  .account_main_box {
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .account_main_L {
+        margin-bottom: 90px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_details {
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 700px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 40px;
+
+            .account_items_heading {
+              text-align: center;
+            }
+
+            .account_items_holder {
+              .cart_item,
+              .favorite_item {
+                max-width: 100%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  opacity: 1;
+                  scale: 0.98;
+
+                  &:hover {
+                    scale: 0.98;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Smaller Devices (Phones)
+@media all and (max-width: 419px) {
+  .account_main_box {
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .account_main_L {
+        margin-bottom: 40px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_heading {
+            font-size: 18px;
+          }
+
+          .account_profile_img_holder {
+            max-width: 80px;
+            height: 80px;
+          }
+
+          .account_profile_details {
+            span {
+              font-size: 13px;
+              margin-bottom: 15px;
+            }
+
+            .detail {
+              input {
+                font-size: 12px;
+              }
+            }
+
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 700px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .account_items_heading {
+              text-align: center;
+              font-size: 18px;
+              padding-bottom: 20px;
+            }
+
+            .account_items_holder {
+              max-width: 100%;
+              padding: 10px;
+
+              .cart_item,
+              .favorite_item {
+                height: 340px;
+                max-width: 100%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  .cart_item_img_holder,
+                  .favorite_item_img_holder {
+                    height: 160px;
+
+                    img {
+                      max-width: 120px;
+                      height: 120px;
+                      margin-top: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Pixel 2 XL
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .account_main_box {
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .account_main_L {
+        margin-bottom: 70px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_heading {
+            font-size: 18px;
+          }
+
+          .account_profile_img_holder {
+            max-width: 110px;
+            height: 110px;
+          }
+
+          .account_profile_details {
+            span {
+              font-size: 17px;
+              margin-bottom: 15px;
+            }
+
+            .detail {
+              input {
+                font-size: 13px;
+              }
+            }
+
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 700px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .account_items_heading {
+              text-align: center;
+              font-size: 18px;
+              padding-bottom: 20px;
+            }
+
+            .account_items_holder {
+              max-width: 100%;
+              padding: 10px;
+
+              .cart_item,
+              .favorite_item {
+                height: 340px;
+                max-width: 50%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  .cart_item_img_holder,
+                  .favorite_item_img_holder {
+                    height: 160px;
+
+                    img {
+                      max-width: 120px;
+                      height: 120px;
+                      margin-top: 20px;
+                    }
+                  }
+
+                  .cart_item_details,
+                  .favorite_item_details {
+                    .cart_item_details_inner,
+                    .favorite_item_details_inner {
+                      .cart_item_series,
+                      .favorite_item_series {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_type,
+                      .favorite_item_type {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_name,
+                      .favorite_item_name {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .account_main_box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .account_main_L {
+        margin-bottom: 120px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_heading {
+            font-size: 21px;
+          }
+
+          .account_profile_img_holder {
+            max-width: 150px;
+            height: 150px;
+          }
+
+          .account_profile_details {
+            span {
+              font-size: 17px;
+              margin-bottom: 15px;
+            }
+
+            .detail {
+              input {
+                font-size: 14px;
+              }
+            }
+
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 700px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .account_items_heading {
+              text-align: center;
+              font-size: 21px;
+              padding-bottom: 20px;
+            }
+
+            .account_items_holder {
+              max-width: 100%;
+              padding: 10px;
+
+              .cart_item,
+              .favorite_item {
+                height: 340px;
+                max-width: 50%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  .cart_item_img_holder,
+                  .favorite_item_img_holder {
+                    height: 160px;
+
+                    img {
+                      max-width: 120px;
+                      height: 120px;
+                      margin-top: 20px;
+                    }
+                  }
+
+                  .cart_item_details,
+                  .favorite_item_details {
+                    .cart_item_details_inner,
+                    .favorite_item_details_inner {
+                      .cart_item_series,
+                      .favorite_item_series {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_type,
+                      .favorite_item_type {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_name,
+                      .favorite_item_name {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .account_main_box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .account_main_L {
+        margin-bottom: 120px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_heading {
+            font-size: 21px;
+          }
+
+          .account_profile_img_holder {
+            max-width: 150px;
+            height: 150px;
+          }
+
+          .account_profile_details {
+            span {
+              font-size: 17px;
+              margin-bottom: 15px;
+            }
+
+            .detail {
+              input {
+                font-size: 14px;
+              }
+            }
+
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 700px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .account_items_heading {
+              text-align: center;
+              font-size: 21px;
+              padding-bottom: 20px;
+            }
+
+            .account_items_holder {
+              max-width: 100%;
+              padding: 10px;
+
+              .cart_item,
+              .favorite_item {
+                height: 340px;
+                max-width: 50%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  .cart_item_img_holder,
+                  .favorite_item_img_holder {
+                    height: 160px;
+
+                    img {
+                      max-width: 120px;
+                      height: 120px;
+                      margin-top: 20px;
+                    }
+                  }
+
+                  .cart_item_details,
+                  .favorite_item_details {
+                    .cart_item_details_inner,
+                    .favorite_item_details_inner {
+                      .cart_item_series,
+                      .favorite_item_series {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_type,
+                      .favorite_item_type {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_name,
+                      .favorite_item_name {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .account_main_box {
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .account_main_L {
+        margin-bottom: 120px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_heading {
+            font-size: 21px;
+          }
+
+          .account_profile_img_holder {
+            max-width: 150px;
+            height: 150px;
+          }
+
+          .account_profile_details {
+            span {
+              font-size: 17px;
+              margin-bottom: 15px;
+            }
+
+            .detail {
+              input {
+                font-size: 14px;
+              }
+            }
+
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 800px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .account_items_heading {
+              text-align: center;
+              font-size: 21px;
+              padding-bottom: 20px;
+            }
+
+            .account_items_holder {
+              max-width: 100%;
+              padding: 10px;
+
+              .cart_item,
+              .favorite_item {
+                height: 340px;
+                max-width: 50%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  .cart_item_img_holder,
+                  .favorite_item_img_holder {
+                    height: 160px;
+
+                    img {
+                      max-width: 120px;
+                      height: 120px;
+                      margin-top: 20px;
+                    }
+                  }
+
+                  .cart_item_details,
+                  .favorite_item_details {
+                    .cart_item_details_inner,
+                    .favorite_item_details_inner {
+                      .cart_item_series,
+                      .favorite_item_series {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_type,
+                      .favorite_item_type {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_name,
+                      .favorite_item_name {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .account_main_box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .account_main_L {
+        margin-bottom: 120px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: transparent;
+
+          .account_profile_heading {
+            font-size: 21px;
+          }
+
+          .account_profile_img_holder {
+            max-width: 150px;
+            height: 150px;
+          }
+
+          .account_profile_details {
+            span {
+              font-size: 17px;
+              margin-bottom: 15px;
+            }
+
+            .detail {
+              input {
+                font-size: 14px;
+              }
+            }
+
+            .signout_account_holder {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        .account_items {
+          max-width: 700px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .account_items_heading {
+              text-align: center;
+              font-size: 21px;
+              padding-bottom: 20px;
+            }
+
+            .account_items_holder {
+              max-width: 100%;
+              padding: 10px;
+
+              .cart_item,
+              .favorite_item {
+                height: 340px;
+                max-width: 50%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  .cart_item_img_holder,
+                  .favorite_item_img_holder {
+                    height: 160px;
+
+                    img {
+                      max-width: 120px;
+                      height: 120px;
+                      margin-top: 20px;
+                    }
+                  }
+
+                  .cart_item_details,
+                  .favorite_item_details {
+                    .cart_item_details_inner,
+                    .favorite_item_details_inner {
+                      .cart_item_series,
+                      .favorite_item_series {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_type,
+                      .favorite_item_type {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_name,
+                      .favorite_item_name {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Laptops
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .account_main_box {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    padding-left: 60px;
+
+    .account_main_row {
+      .account_main_side {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .account_main_L {
+        max-width: 30%;
+        margin-bottom: 0px;
+
+        .account_profile {
+          max-width: 800px;
+          padding-bottom: 30px;
+          background-color: rgb(252, 252, 252);
+
+          .account_profile_heading {
+            font-size: 21px;
+            margin-top: 0;
+            padding-top: 30px;
+          }
+
+          .account_profile_img_holder {
+            max-width: 150px;
+            height: 150px;
+          }
+
+          .account_profile_details {
+            span {
+              font-size: 17px;
+              margin-bottom: 15px;
+            }
+
+            .detail {
+              input {
+                font-size: 14px;
+              }
+            }
+
+            .signout_account_holder {
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+
+      .account_main_R {
+        max-width: 70%;
+        .account_items {
+          max-width: 800px;
+          padding-top: 30px;
+          background-color: transparent;
+          @include quickCenter("relative");
+
+          .account_items_section {
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .account_items_heading {
+              text-align: left;
+              font-size: 21px;
+              padding-bottom: 20px;
+            }
+
+            .account_items_holder {
+              max-width: 100%;
+              padding: 10px;
+
+              .cart_item,
+              .favorite_item {
+                height: 340px;
+                max-width: 50%;
+                width: 100%;
+                border: none;
+
+                .cart_item_inner,
+                .favorite_item_inner {
+                  .cart_item_img_holder,
+                  .favorite_item_img_holder {
+                    height: 160px;
+
+                    img {
+                      max-width: 120px;
+                      height: 120px;
+                      margin-top: 20px;
+                    }
+                  }
+
+                  .cart_item_details,
+                  .favorite_item_details {
+                    .cart_item_details_inner,
+                    .favorite_item_details_inner {
+                      .cart_item_series,
+                      .favorite_item_series {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_type,
+                      .favorite_item_type {
+                        font-size: 10px;
+                      }
+
+                      .cart_item_name,
+                      .favorite_item_name {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

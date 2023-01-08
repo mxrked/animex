@@ -1,0 +1,71 @@
+@mixin padding($t, $b, $l, $r) {
+  padding-top: $t;
+  padding-bottom: $b;
+  padding-left: $l;
+  padding-right: $r;
+}
+
+@mixin margin($t, $b, $l, $r) {
+  margin-top: $t;
+  margin-bottom: $b;
+  margin-left: $l;
+  margin-right: $r;
+}
+
+@mixin quickCenter($pos) {
+  @if $pos == "relative" {
+    margin-left: auto;
+    margin-right: auto;
+  } @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin displayElement($d, $jC, $aI) {
+  display: $d;
+  justify-content: $jC;
+  align-items: $aI;
+}
+
+@mixin bGSU($s, $pos) {
+  background-size: $s;
+  background-position: $pos;
+  background-repeat: no-repeat;
+}
+
+@mixin selection() {
+  &::selection {
+    color: #eeeeee;
+    background-color: #f05454;
+  }
+
+  &::-moz-selection {
+    color: #eeeeee;
+    background-color: #f05454;
+  }
+}
+
+@mixin customScrollBar($width, $track, $thumb, $thumb_hover) {
+  scrollbar-color: $thumb $track;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: $width;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-track {
+    background: $track;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    border: 3px solid $track;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $thumb_hover;
+  }
+}

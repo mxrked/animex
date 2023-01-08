@@ -1,0 +1,26 @@
+[
+  {
+    "blogID": "#ID_001",
+    "blogName": "Demon Slayer Season 3 will be brought to the silver screens.",
+    "blogDate": "12/19/2022",
+    "blogDesc": "Demon Slayer's third season is heading to the big screen with its launch of the World Tour.",
+    "blogImg": "https://raw.githubusercontent.com/mxrked/animex_CDN/main/imgs/bgs/demon_slayer/store_section_bg/store_section_bg.webp",
+    "blogAuthor": "xX_BoarHeadMan_Xx"
+  },
+  {
+    "blogID": "#ID_002",
+    "blogName": "Chainsaw Man is renewed for next season.",
+    "blogDate": "2/9/2023",
+    "blogDesc": "The popular shounen anime Chainsaw Man has been renewed for its next season from MAPPA studios.",
+    "blogImg": "https://raw.githubusercontent.com/mxrked/animex_CDN/main/imgs/bgs/chainsaw_man/store_section_bg/store_section_bg.webp",
+    "blogAuthor": "1_4_All"
+  },
+  {
+    "blogID": "#ID_003",
+    "blogName": "Spy X Family continues with movie and new season.",
+    "blogDate": "3/20/2023",
+    "blogDesc": "Spy X Family will be continuing the Forgers adventures in a new movie and a brand new season in 2023.",
+    "blogImg": "https://raw.githubusercontent.com/mxrked/animex_CDN/main/imgs/bgs/spy_x_family/store_section_bg/store_section_bg.webp",
+    "blogAuthor": "HermitPurple101"
+  }
+]

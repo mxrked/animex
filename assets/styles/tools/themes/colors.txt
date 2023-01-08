@@ -1,0 +1,8 @@
+$SanJuan: #364F6B;
+$Pelorous: #3FC1C9;
+$WildSand: #F5F5F5;
+$OuterSpace: #303841;
+$BondiBlue: #00ADB5;
+$Gallery: #EEEEEE;
+$Orange: #FF5722;
+$Carnation: #F05454;

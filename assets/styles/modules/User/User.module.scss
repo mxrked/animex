@@ -1,0 +1,1411 @@
+// Imports
+@import "../../tools/mixins/mixins.scss";
+@import "../../tools/themes/themes.scss";
+@import "../../tools/variables/variable.scss";
+
+// Fonts
+@font-face {
+  font-family: "Kanit Medium";
+  src: url("../../../fonts/Kanit/Kanit-Medium.ttf");
+}
+@font-face {
+  font-family: "Kanit Semi Bold";
+  src: url("../../../fonts/Kanit/Kanit-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Kanit Bold";
+  src: url("../../../fonts/Kanit/Kanit-Bold.ttf");
+}
+@font-face {
+  font-family: "Kanit Extra Bold";
+  src: url("../../../fonts/Kanit/Kanit-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Kanit Black";
+  src: url("../../../fonts/Kanit/Kanit-Black.ttf");
+}
+@font-face {
+  font-family: "Martel Sans Regular";
+  src: url("../../../fonts/Martel_Sans/MartelSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Martel Sans Semi Bold";
+  src: url("../../../fonts/Martel_Sans/MartelSans-SemiBold.ttf");
+}
+
+// Desktop
+.login_signup_box {
+  padding: 0;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .login_signup_row {
+    .login_signup_side {
+      height: 100vh;
+    }
+
+    .login_signup_L {
+      .login_signup_bg {
+        width: 100%;
+        height: 100%;
+
+        .bg {
+          @include bGSU(cover, 60% 0%);
+          filter: brightness(60%);
+        }
+      }
+    }
+
+    .login_signup_R {
+      @include displayElement(flex, flex-start, center);
+
+      .login_signup_forms {
+        max-width: 1200px;
+        width: 100%;
+        @include quickCenter("relative");
+
+        .login_signup_forms_inner {
+          .login_signup_forms_inner_top {
+            @include displayElement(flex, space-between, center);
+
+            .logo {
+              display: inline-block;
+              cursor: default;
+
+              span {
+                font-family: "Kanit Extra Bold";
+                font-size: $Logo;
+                color: $Carnation;
+                text-transform: uppercase;
+                @include selection();
+              }
+            }
+
+            .index_link {
+              border-radius: 50px;
+              width: 50px;
+              height: 50px;
+              @include displayElement(flex, center, center);
+              border: 4px solid $Orange;
+              cursor: pointer;
+
+              &:hover {
+                background-color: $Orange;
+                border-color: $Orange;
+
+                .icon {
+                  color: $Gallery;
+                }
+              }
+
+              .icon {
+                font-size: 23px;
+                color: $Orange;
+              }
+            }
+          }
+
+          .signup_hint,
+          .login_hint {
+            font-family: "Martel Sans Semi Bold";
+            display: none;
+            margin-top: 50px;
+            color: $Orange;
+            font-size: 16px;
+            text-transform: uppercase;
+            justify-content: flex-start;
+
+            span {
+              text-transform: none;
+              color: $OuterSpace;
+              margin-left: 10px;
+              @include selection();
+            }
+          }
+
+          .forms_box {
+            margin-top: 25px;
+            @include displayElement(flex, space-between, flex-start);
+
+            .form_holder {
+              max-width: 45%;
+              width: 100%;
+
+              h2 {
+                font-family: "Kanit Medium";
+                font-size: 25px;
+                text-transform: uppercase;
+                opacity: 0.7;
+                cursor: default;
+                @include selection();
+              }
+
+              form {
+                display: block;
+                margin-top: 30px;
+
+                .form_set {
+                  display: grid;
+                  margin-bottom: 30px;
+                  max-width: 700px;
+
+                  label {
+                    font-family: "Martel Sans Semi Bold";
+                    font-size: 15px;
+                    opacity: 0.8;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    @include selection();
+                  }
+
+                  input {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 40px;
+                    @include displayElement(flex, flex-start, center);
+                    background-color: ghostwhite !important;
+                    -webkit-box-shadow: 0 0 0 50px ghostwhite inset;
+                    @include padding(0, 0, 10px, 10px);
+                    font-family: "Martel Sans Semi Bold";
+                    font-size: 14px;
+                    @include selection();
+
+                    &::placeholder {
+                      position: relative;
+                      top: 1.5px;
+                    }
+                  }
+                }
+
+                .password_sets {
+                  @include displayElement(flex, space-between, center);
+
+                  .form_set {
+                    width: 100%;
+                    max-width: 48%;
+                  }
+                }
+
+                .form_btns {
+                  @include displayElement(flex, space-between, center);
+                  max-width: 170px;
+
+                  .submit {
+                    border: 2px solid $Orange;
+                    font-family: "Martel Sans Semi Bold";
+                    padding: 10px;
+                    color: $Orange;
+
+                    &:hover {
+                      background-color: $Orange;
+                      color: $Gallery;
+                    }
+
+                    span {
+                      position: relative;
+                      top: 2.5px;
+                      text-transform: uppercase;
+                      font-size: 16px;
+                      @include selection();
+                    }
+                  }
+
+                  .reset {
+                    border: 2px solid $OuterSpace;
+                    font-family: "Martel Sans Semi Bold";
+                    padding: 10px;
+                    color: $OuterSpace;
+
+                    &:hover {
+                      background-color: $OuterSpace;
+                      color: $Gallery;
+                    }
+
+                    span {
+                      position: relative;
+                      top: 2.5px;
+                      text-transform: uppercase;
+                      font-size: 16px;
+                      @include selection();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media all and (max-width: 1995px) {
+  .login_signup_box {
+    .login_signup_row {
+      .login_signup_L {
+        max-width: 20%;
+        width: 100%;
+      }
+      .login_signup_R {
+        max-width: 80%;
+        width: 100%;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 30px;
+          padding-right: 30px;
+          justify-content: center;
+
+          .login_signup_forms_inner {
+            .forms_box {
+              .form_holder {
+                max-width: 45%;
+                margin-top: 50px;
+
+                form {
+                  max-width: 100%;
+
+                  .form_set {
+                    label {
+                      font-size: 15px;
+                    }
+
+                    input {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .login_signup_box {
+    .login_signup_row {
+      .login_signup_side {
+        height: 100vh;
+      }
+
+      .login_signup_L {
+        max-width: 0%;
+        width: 100%;
+        display: none;
+      }
+      .login_signup_R {
+        max-width: 100%;
+        width: 100%;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 60px;
+          padding-right: 60px;
+          justify-content: center;
+
+          .login_signup_forms_inner {
+            .signup_hint,
+            .login_hint {
+              font-size: 14px;
+              flex-wrap: wrap;
+
+              span {
+                margin-left: 0;
+                margin-top: 10px;
+              }
+            }
+
+            .forms_box {
+              .form_holder {
+                max-width: 45%;
+
+                form {
+                  max-width: 100%;
+
+                  .form_set {
+                    input {
+                      font-size: 13px;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: block;
+
+                    .form_set {
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+// Desktop Window (Smallest)
+@media all and (max-width: 768px) {
+  .login_signup_box {
+    .login_signup_row {
+      .login_signup_side {
+        height: 115vh;
+      }
+
+      .login_signup_L {
+        max-width: 0%;
+        width: 100%;
+        display: none;
+      }
+      .login_signup_R {
+        max-width: 100%;
+        width: 100%;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 40px;
+          padding-right: 40px;
+
+          .login_signup_forms_inner {
+            .signup_hint,
+            .login_hint {
+              font-size: 14px;
+              flex-wrap: wrap;
+
+              span {
+                margin-left: 0px;
+                margin-top: 0px;
+              }
+            }
+
+            .login_signup_forms_inner_top {
+              .logo {
+                span {
+                  font-size: 42px;
+                }
+              }
+
+              .index_link {
+                width: 40px;
+                height: 40px;
+
+                .icon {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            .forms_box {
+              display: block;
+              .form_holder {
+                max-width: 100%;
+                margin-bottom: 70px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  max-width: 100%;
+
+                  .form_set {
+                    input {
+                      font-size: 13px;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: block;
+
+                    .form_set {
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Smaller Devices (Phones)
+@media all and (max-width: 419px) {
+  .login_signup_box {
+    .login_signup_row {
+      .login_signup_side {
+        height: 100%;
+      }
+
+      .login_signup_L {
+        max-width: 0%;
+        width: 100%;
+        display: none;
+      }
+      .login_signup_R {
+        max-width: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .login_signup_forms_inner {
+            .login_signup_forms_inner_top {
+              .logo {
+                span {
+                  font-size: 28px;
+                }
+              }
+
+              .index_link {
+                width: 35px;
+                height: 35px;
+
+                .icon {
+                  font-size: 15px;
+                }
+              }
+            }
+
+            .signup_hint,
+            .login_hint {
+              font-size: 14px;
+              flex-wrap: wrap;
+
+              span {
+                margin-left: 0;
+                margin-top: 10px;
+              }
+            }
+
+            .forms_box {
+              display: block;
+              margin-top: 40px;
+
+              .form_holder {
+                max-width: 100%;
+                margin-bottom: 40px;
+
+                h2 {
+                  font-size: 20px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  max-width: 100%;
+
+                  .form_set {
+                    label {
+                      font-size: 13px;
+                    }
+
+                    input {
+                      font-size: 13px;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: block;
+
+                    .form_set {
+                      max-width: 100%;
+                    }
+                  }
+
+                  .form_btns {
+                    max-width: 150px;
+
+                    .submit,
+                    .reset {
+                      padding: 8px;
+                      padding-top: 7px;
+
+                      span {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Pixel 2 XL
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login_signup_box {
+    .login_signup_row {
+      .login_signup_side {
+        height: 100%;
+      }
+
+      .login_signup_L {
+        max-width: 0%;
+        width: 100%;
+        display: none;
+      }
+      .login_signup_R {
+        max-width: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .login_signup_forms_inner {
+            .login_signup_forms_inner_top {
+              .logo {
+                span {
+                  font-size: 28px;
+                }
+              }
+
+              .index_link {
+                width: 35px;
+                height: 35px;
+
+                .icon {
+                  font-size: 15px;
+                }
+              }
+            }
+
+            .signup_hint,
+            .login_hint {
+              font-size: 14px;
+              flex-wrap: wrap;
+
+              span {
+                margin-left: 0;
+                margin-top: 0px;
+              }
+            }
+
+            .forms_box {
+              display: block;
+              margin-top: 40px;
+
+              .form_holder {
+                max-width: 100%;
+                margin-bottom: 40px;
+
+                h2 {
+                  font-size: 20px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  .form_sets_holder {
+                    @include displayElement(flex, space-between, center);
+                    width: 100%;
+                  }
+
+                  .form_set {
+                    max-width: 48%;
+                    width: 100%;
+                    display: block;
+
+                    label {
+                      font-size: 13px;
+                    }
+
+                    input {
+                      font-size: 13px;
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: flex;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+
+                  .form_btns {
+                    max-width: 150px;
+
+                    .submit,
+                    .reset {
+                      padding: 8px;
+                      padding-top: 7px;
+
+                      span {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+
+                .login_form {
+                  .form_sets_holder {
+                    display: block;
+                  }
+
+                  .form_set {
+                    max-width: 100%;
+                    width: 100%;
+                  }
+
+                  .password_sets {
+                    width: 100%;
+                    max-width: 100%;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_signup_box {
+    max-width: 90%;
+
+    .login_signup_row {
+      .login_signup_side {
+        height: 100vh;
+      }
+
+      .login_signup_L {
+        max-width: 0%;
+        width: 100%;
+        display: none;
+      }
+      .login_signup_R {
+        max-width: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .login_signup_forms_inner {
+            .login_signup_forms_inner_top {
+              .logo {
+                span {
+                  font-size: 35px;
+                }
+              }
+
+              .index_link {
+                width: 40px;
+                height: 40px;
+
+                .icon {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            .signup_hint,
+            .login_hint {
+              font-size: 14px;
+              flex-wrap: wrap;
+
+              span {
+                margin-left: 0;
+                margin-top: 0px;
+              }
+            }
+
+            .forms_box {
+              display: block;
+              margin-top: 40px;
+
+              .form_holder {
+                max-width: 100%;
+                margin-bottom: 60px;
+
+                h2 {
+                  font-size: 24px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  .form_sets_holder {
+                    @include displayElement(flex, space-between, center);
+                    width: 100%;
+                  }
+
+                  .form_set {
+                    max-width: 48%;
+                    width: 100%;
+                    display: block;
+
+                    label {
+                      font-size: 16px;
+                    }
+
+                    input {
+                      font-size: 15px;
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: flex;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+
+                  .form_btns {
+                    max-width: 170px;
+
+                    .submit,
+                    .reset {
+                      padding: 10px;
+                      padding-top: 11px;
+
+                      span {
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+
+                .login_form {
+                  .form_sets_holder {
+                    display: block;
+                  }
+
+                  .form_set {
+                    max-width: 100%;
+                    width: 100%;
+                  }
+
+                  .password_sets {
+                    width: 100%;
+                    max-width: 100%;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_signup_box {
+    max-width: 90%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    .login_signup_row {
+      .login_signup_side {
+        height: 100%;
+      }
+
+      .login_signup_L {
+        max-width: 0%;
+        width: 100%;
+        display: none;
+      }
+      .login_signup_R {
+        max-width: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .login_signup_forms_inner {
+            .login_signup_forms_inner_top {
+              .logo {
+                span {
+                  font-size: 30px;
+                }
+              }
+
+              .index_link {
+                width: 35px;
+                height: 35px;
+
+                .icon {
+                  font-size: 15px;
+                }
+              }
+            }
+
+            .signup_hint,
+            .login_hint {
+              font-size: 14px;
+              flex-wrap: wrap;
+
+              span {
+                margin-left: 0;
+                margin-top: 0px;
+              }
+            }
+
+            .forms_box {
+              display: block;
+              margin-top: 40px;
+
+              .form_holder {
+                max-width: 100%;
+                margin-bottom: 60px;
+
+                h2 {
+                  font-size: 21px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  .form_sets_holder {
+                    @include displayElement(flex, space-between, center);
+                    width: 100%;
+                  }
+
+                  .form_set {
+                    max-width: 48%;
+                    width: 100%;
+                    display: block;
+
+                    label {
+                      font-size: 14px;
+                    }
+
+                    input {
+                      font-size: 13px;
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: flex;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+
+                  .form_btns {
+                    max-width: 140px;
+
+                    .submit,
+                    .reset {
+                      padding: 7px;
+                      padding-top: 5px;
+
+                      span {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+
+                .login_form {
+                  .form_sets_holder {
+                    display: block;
+                  }
+
+                  .form_set {
+                    max-width: 100%;
+                    width: 100%;
+                  }
+
+                  .password_sets {
+                    width: 100%;
+                    max-width: 100%;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .login_signup_box {
+    max-width: 90%;
+
+    .login_signup_row {
+      .login_signup_side {
+        height: 100vh;
+      }
+
+      .login_signup_L {
+        max-width: 0%;
+        width: 100%;
+        display: none;
+      }
+      .login_signup_R {
+        max-width: 100%;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+          position: relative;
+          top: -20px;
+
+          .login_signup_forms_inner {
+            .login_signup_forms_inner_top {
+              .logo {
+                span {
+                  font-size: 35px;
+                }
+              }
+
+              .index_link {
+                width: 40px;
+                height: 40px;
+
+                .icon {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            .forms_box {
+              display: block;
+              margin-top: 40px;
+
+              .form_holder {
+                max-width: 100%;
+                margin-bottom: 60px;
+
+                h2 {
+                  font-size: 24px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  .form_sets_holder {
+                    @include displayElement(flex, space-between, center);
+                    width: 100%;
+                  }
+
+                  .form_set {
+                    max-width: 48%;
+                    width: 100%;
+                    display: block;
+
+                    label {
+                      font-size: 16px;
+                    }
+
+                    input {
+                      font-size: 15px;
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: flex;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+
+                  .form_btns {
+                    max-width: 170px;
+
+                    .submit,
+                    .reset {
+                      padding: 10px;
+                      padding-top: 11px;
+
+                      span {
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+
+                .login_form {
+                  .form_sets_holder {
+                    display: block;
+                  }
+
+                  .form_set {
+                    max-width: 100%;
+                    width: 100%;
+                  }
+
+                  .password_sets {
+                    width: 100%;
+                    max-width: 100%;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login_signup_box {
+    max-width: 100%;
+    padding: 0;
+
+    .login_signup_row {
+      .login_signup_side {
+        height: 125vh;
+      }
+
+      .login_signup_L {
+        max-width: 20%;
+        width: 100%;
+        display: block;
+      }
+      .login_signup_R {
+        max-width: 80%;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .login_signup_forms {
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .login_signup_forms_inner {
+            .login_signup_forms_inner_top {
+              .logo {
+                span {
+                  font-size: 31px;
+                }
+              }
+
+              .index_link {
+                width: 40px;
+                height: 40px;
+
+                .icon {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            .forms_box {
+              display: block;
+              margin-top: 20px;
+
+              .form_holder {
+                max-width: 95%;
+                margin-bottom: 30px;
+
+                h2 {
+                  font-size: 20px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  .form_sets_holder {
+                    @include displayElement(flex, space-between, center);
+                    width: 100%;
+                  }
+
+                  .form_set {
+                    max-width: 48%;
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 20px;
+
+                    label {
+                      font-size: 12px;
+                    }
+
+                    input {
+                      font-size: 13px;
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: flex;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+
+                  .form_btns {
+                    max-width: 145px;
+
+                    .submit,
+                    .reset {
+                      padding: 7px;
+                      padding-top: 6px;
+
+                      span {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+
+                .login_form {
+                  .form_sets_holder {
+                    display: block;
+                  }
+
+                  .form_set {
+                    max-width: 100%;
+                    width: 100%;
+                  }
+
+                  .password_sets {
+                    width: 100%;
+                    max-width: 100%;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Laptops
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_signup_box {
+    max-width: 100%;
+    padding: 0;
+
+    .login_signup_row {
+      .login_signup_side {
+        height: 100%;
+      }
+
+      .login_signup_L {
+        max-width: 20%;
+        width: 100%;
+        height: 100vh;
+        display: block;
+      }
+      .login_signup_R {
+        max-width: 80%;
+        width: 100%;
+        height: 100vh;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .login_signup_forms {
+          position: relative;
+          top: -20px;
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .login_signup_forms_inner {
+            .login_signup_forms_inner_top {
+              max-width: 85%;
+              @include quickCenter("relative");
+
+              .logo {
+                span {
+                  font-size: 35px;
+                }
+              }
+
+              .index_link {
+                width: 40px;
+                height: 40px;
+
+                .icon {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            .signup_hint,
+            .login_hint {
+              max-width: 85%;
+              width: 100%;
+              @include quickCenter("relative");
+            }
+
+            .forms_box {
+              display: block;
+              margin-top: 20px;
+
+              .form_holder {
+                max-width: 85%;
+                @include quickCenter("relative");
+                margin-bottom: 30px;
+
+                h2 {
+                  font-size: 21px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                form {
+                  .form_sets_holder {
+                    @include displayElement(flex, space-between, center);
+                    width: 100%;
+                  }
+
+                  .form_set {
+                    max-width: 48%;
+                    width: 100%;
+                    display: block;
+
+                    label {
+                      font-size: 14px;
+                    }
+
+                    input {
+                      font-size: 13px;
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+
+                  .password_sets {
+                    max-width: 100%;
+                    display: flex;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+
+                  .form_btns {
+                    max-width: 155px;
+
+                    .submit,
+                    .reset {
+                      padding: 8px;
+                      padding-top: 7px;
+
+                      span {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+
+                .login_form {
+                  .form_sets_holder {
+                    display: block;
+                  }
+
+                  .form_set {
+                    max-width: 100%;
+                    width: 100%;
+                  }
+
+                  .password_sets {
+                    width: 100%;
+                    max-width: 100%;
+
+                    .form_set {
+                      max-width: 48%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

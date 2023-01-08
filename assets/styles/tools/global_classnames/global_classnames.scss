@@ -1,0 +1,9 @@
+.full-second {
+  transition: 1s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.half-second {
+  transition: 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}

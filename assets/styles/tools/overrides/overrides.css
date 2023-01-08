@@ -1,0 +1,223 @@
+.overrides_Index .overrides_Index_Top .slick-slider .slick-track,
+.overrides_Index .overrides_Index_Top .slick-slider .slick-list {
+  -webkit-perspective: 2000;
+  -webkit-backface-visibility: hidden;
+}
+
+.overrides_Index .overrides_Index_Top .slick-slider .slick-list .slick-track .slick-slide .index-top-slide .darken-inner {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.overrides_Index .overrides_Index_Top .slick-slider .slick-list .slick-track .slick-active .index-top-slide .darken-inner {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+  position: absolute;
+  bottom: 10px;
+  z-index: 50;
+  right: 0;
+  max-width: 250px;
+}
+
+.overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+  margin: 15px;
+}
+
+.overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+  color: white;
+  font-size: 30px;
+}
+
+.overrides_Index .overrides_Index_Products .slick-slider .slick-dots {
+  position: absolute;
+  bottom: -30px;
+  z-index: 50;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 250px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overrides_Index .overrides_Index_Products .slick-slider .slick-dots li {
+  margin: 5px;
+}
+
+.overrides_Index .overrides_Index_Products .slick-slider .slick-dots li button::before {
+  color: #666666;
+  font-size: 24px;
+}
+
+@media all and (max-width: 768px) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 25px;
+  }
+}
+
+@media all and (max-width: 419px) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 0px;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 0px;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 0px;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 27px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    z-index: 50;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 27px;
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    z-index: 50;
+    right: 0;
+    left: auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    max-width: 250px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li {
+    margin: 10px;
+  }
+  .overrides_Index .overrides_Index_Top .slick-slider .slick-dots li button::before {
+    color: white;
+    font-size: 27px;
+  }
+}
+/*# sourceMappingURL=overrides.css.map */

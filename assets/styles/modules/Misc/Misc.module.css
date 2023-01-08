@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "Kanit Medium";
+  src: url("../../../fonts/Kanit/Kanit-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Semi Bold";
+  src: url("../../../fonts/Kanit/Kanit-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Bold";
+  src: url("../../../fonts/Kanit/Kanit-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Extra Bold";
+  src: url("../../../fonts/Kanit/Kanit-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Kanit Black";
+  src: url("../../../fonts/Kanit/Kanit-Black.ttf");
+}
+
+@font-face {
+  font-family: "Martel Sans Regular";
+  src: url("../../../fonts/Martel_Sans/MartelSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Martel Sans Semi Bold";
+  src: url("../../../fonts/Martel_Sans/MartelSans-SemiBold.ttf");
+}
+
+.b2t {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: -200px;
+  right: 20px;
+  border-radius: 5px;
+  z-index: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 2px 1px rgba(93, 93, 93, 0.302);
+          box-shadow: 0px 2px 1px rgba(93, 93, 93, 0.302);
+}
+
+.b2t:hover {
+  background-color: #ff5722;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.b2t:hover .icon {
+  color: #eeeeee;
+}
+
+.b2t .icon {
+  font-size: 32px;
+  color: #ff5722;
+  position: relative;
+  top: -1px;
+}
+
+@media all and (max-width: 991px) {
+  .b2t {
+    width: 45px;
+    height: 45px;
+    right: 15px;
+  }
+  .b2t .icon {
+    font-size: 29px;
+    top: 0;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .b2t {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+  }
+  .b2t .icon {
+    font-size: 26px;
+    top: 0;
+  }
+}
+
+@media all and (max-width: 419px) {
+  .b2t {
+    width: 35px;
+    height: 35px;
+    right: 13px;
+  }
+  .b2t:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .b2t .icon {
+    font-size: 21px;
+    top: 0;
+  }
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .b2t {
+    width: 35px;
+    height: 35px;
+    right: 13px;
+  }
+  .b2t:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .b2t .icon {
+    font-size: 21px;
+    top: 0;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .b2t {
+    width: 42px;
+    height: 42px;
+    right: 15px;
+  }
+  .b2t:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .b2t .icon {
+    font-size: 28px;
+    top: 0;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .b2t {
+    width: 39px;
+    height: 39px;
+    right: 15px;
+  }
+  .b2t:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .b2t .icon {
+    font-size: 25px;
+    top: 0;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .b2t {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+  }
+  .b2t:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .b2t .icon {
+    font-size: 32px;
+    top: 0;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .b2t {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+  }
+  .b2t:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .b2t .icon {
+    font-size: 32px;
+    top: 0;
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .b2t {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+  }
+  .b2t:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .b2t .icon {
+    font-size: 32px;
+    top: 0;
+  }
+}
+/*# sourceMappingURL=Misc.module.css.map */
