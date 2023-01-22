@@ -1,0 +1,10 @@
+
+This txt file is used to note down what files to upload to the github repo for
+it to be deployed on Netlify. 
+
+This is mostly to prevent going over the monthly 300 minutes.
+
+ex:
+DATE
+====
+- FILES_UPLOADED - COMMIT_MESSAGE

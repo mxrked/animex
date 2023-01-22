@@ -1,0 +1,16 @@
+# THIS IS USED TO INSTALL THE TEMPLATES LIBRARY DEPENDENCIES
+npm i axios, body-parser, bootstrap, emailjs, framer-motion, fs, lazysizes, mongodb, mongoose, net, nextjs-sitemap-generator, react-icons, react-image-and-background-image-fade, react-intersection-observer, react-slick, slick-carousel, tls, nprogress
+
+# ADD HOMEPAGE URL IN package.json UNDER name
+"homepage": PUT_SITE_URL_HERE
+
+# ADD export COMMAND IN package.json UNDER start
+"export": "next export"
+
+# ADD SITEMAP GENERATOR COMMAND IN package.json UNDER lint IN scripts
+"generateSitemap": "node ./scripts/generate-sitemap.js"
+
+# USEFUL REGEX LINES
+const EMAIL_VALIDATION = "^[a-zA-Z0–9+_.-]+@[a-zA-Z0–9.-]+$";
+const EMPTY_STRING = "^\s*$";
+const STRONG_PASSWORD = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s)(?=.*[!@#$*])";

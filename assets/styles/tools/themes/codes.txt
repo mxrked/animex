@@ -1,0 +1,7 @@
+$EbonyClay: #222831;
+$BrightGray: #393E46;
+$PickledBluewood: #2D4059;
+$Martinique: #2B2E4A;
+$Cinnabar: #E84545;
+$Mandy: #EA5455;
+$Jaffa: #F07B3F;
